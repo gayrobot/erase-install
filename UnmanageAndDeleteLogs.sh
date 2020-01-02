@@ -24,7 +24,7 @@ computerID=$(curl -sku $jssapiuser:$jsspw $jssurl/JSSResource/computers/serialnu
 echo "the computers JSS ID is $computerID"
 
 #Flush All Logs
-#/usr/local/jamf/bin/jamf flushPolicyHistory
+/usr/local/jamf/bin/jamf flushPolicyHistory
 
 #Unmanage device in JSS
 curl -sku $jssapiuser:$jsspw $jssurl/JSSResource/computers/id/$computerID -H "Content-Type: text/xml" -X PUT -d "<computer><general><remote_management><managed>false</managed></remote_management></general></computer>"
