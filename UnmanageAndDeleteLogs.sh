@@ -1,11 +1,12 @@
 #!/bin/bash
 
 #variables
-jssurl="https://activecampaign.jamfcloud.com"
-stringtodecrypt="U2FsdGVkX1++CuYSFcAy2TpDZaeVNCjR+/z6usjMk4CWc8BLiOX7fuHiTzyIhC4B"
-salt="be0ae61215c032d9"
-k="52b9e0815b5ce4a9611994ed"
-jssapiuser="unmanageapi"
+#variables
+jssurl="$4"
+stringtodecrypt="$5"
+salt="$6"
+k="$7"
+jssapiuser="$8"
 #Use Jamfs encrypted parameter tool to log in to JSS
 #This is found at https://github.com/jamf/Encrypted-Script-Parameters
 function DecryptString() {
